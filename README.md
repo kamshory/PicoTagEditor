@@ -9,11 +9,7 @@ PicoTagEditor is a lightweight, customizable tag editor that allows users to add
 - Support for debugging mode to help with development
 - Transforms a regular HTML input element into a tag editor
 
-## Installation
-
-You can include the PicoTagEditor script in your project by either downloading the JavaScript file or linking to it via a CDN.
-
-### Via CDN
+## Example
 
 Add the following script tag to your HTML:
 
