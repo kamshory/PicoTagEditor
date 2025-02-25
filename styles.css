@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.input-bar{
+    background-color: aquamarine;
+}
+
+.pico-tag-editor {
+    width: 300px;
+    text-align: left;
+    vertical-align: top;
+    display: inline-block;
+    position: relative;
+}
+
+.pico-tag-edit {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+[data-focus="true"] .tags-container {
+    margin-top: 0px;
+    position: absolute;
+    background-color: rgb(250, 253, 255);
+    border: 1px solid #dbdbdb;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    overflow: auto;
+}
+[data-focus="false"] .tags-container {
+    display: none;
+}
+
+.pico-tag {
+    background-color: #3076c2;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-right: 0.25rem;
+    margin-bottom: 0.25rem;
+    cursor: pointer;
+}
+
+.pico-tag:hover {
+    background-color: #0056b3;
+}
+
+.pico-tag span {
+    margin-left: 6px;
+    margin-top: 2px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pico-tag span:hover {
+    color: #FF6347;
+}
