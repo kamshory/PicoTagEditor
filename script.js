@@ -43,31 +43,17 @@ function PicoTagEditor(input, options) {
     /**
      * Initializes the tag editor by creating the necessary HTML elements
      * and transferring attributes from the original input element to the new elements.
+     * It also applies custom width, height, and maxHeight settings if provided.
      *
      * @param {HTMLElement} input - The input element that will be transformed into the tag editor.
      */
     this.init = function(input) {
-        // Get the required attributes from the input element
-        const name = input.getAttribute('name');
-        const id = input.getAttribute('id');
-        const className = input.getAttribute('class');
-        const placeholder = input.getAttribute('placeholder');
-
         // Create the outer container for the tag editor
         const tagEditorDiv = document.createElement('div');
         tagEditorDiv.classList.add('pico-tag-editor');
 
         // Create a new input field with the same attributes as the original input
-        const newInput = document.createElement('input');
-        newInput.setAttribute('type', 'text');
-        this.name = name; // Store the name attribute for later use
-        if (id) {
-            newInput.setAttribute('id', id);
-        }
-        newInput.setAttribute('class', className);
-        if (placeholder) {
-            newInput.setAttribute('placeholder', placeholder);
-        }
+        const newInput = input.cloneNode(true);
 
         // Create a container for the tags
         const tagsContainer = document.createElement('div');
@@ -194,7 +180,7 @@ function PicoTagEditor(input, options) {
 
     // If options are provided, merge them with the default settings
     if (typeof options !== 'undefined') {
-        this.settings = { ...this.settings, ...options };
+        this.settings = {...this.settings, ...options};
     }
 
     // Initialize the editor and add event listeners
