@@ -29,7 +29,7 @@ body {
     outline: none;
 }
 
-[data-focus="true"] .tags-container {
+.pico-tag-editor[data-focus="true"] .tags-container {
     margin-top: 0px;
     position: absolute;
     background-color: rgb(250, 253, 255);
@@ -39,7 +39,7 @@ body {
     overflow: auto;
     z-index: 1;
 }
-[data-focus="false"] .tags-container {
+.pico-tag-editor[data-focus="false"] .tags-container {
     display: none;
 }
 
